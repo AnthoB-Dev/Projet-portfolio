@@ -1,0 +1,22 @@
+// GLOBAL
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    background-color: var(--clr-background);
+}
+
+img {
+    width: 100%;
+}

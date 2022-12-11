@@ -1,0 +1,99 @@
+// -----------------------------------------------------------------
+// Fonts
+
+
+// Roboto
+@font-face {
+    font-family: "roboto-regular";
+    src: url("/assets/fonts/roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "roboto-bold";
+    src: url("/assets/fonts/roboto/Roboto-Bold.ttf");
+}
+
+
+// Roboto Slab
+@font-face {
+    font-family: "robotoSlab-light";
+    src: url("/assets/fonts/roboto-slab/RobotoSlab-Light.ttf");
+}
+
+@font-face {
+    font-family: "robotoSlab-regular";
+    src: url("/assets/fonts/roboto-slab/RobotoSlab-Regular.ttf");
+}
+
+@font-face {
+    font-family: "robotoSlab-semibold";
+    src: url("/assets/fonts/roboto-slab/RobotoSlab-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "robotoSlab-bold";
+    src: url("/assets/fonts/roboto-slab/RobotoSlab-Bold.ttf");
+}
+
+
+// Maitree
+
+@font-face {
+    font-family: "maitree-extralight";
+    src: url("/assets/fonts/maitree/Maitree-ExtraLight.ttf");
+}
+
+@font-face {
+    font-family: "maitree-regular";
+    src: url("/assets/fonts/maitree/Maitree-Regular.ttf");
+}
+
+@font-face {
+    font-family: "maitree-semibold";
+    src: url("/assets/fonts/maitree/Maitree-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "maitree-bold";
+    src: url("/assets/fonts/maitree/Maitree-Bold.ttf");
+}
+// -----------------------------------------------------------------
+
+* {
+    font-family: "maitree-bold";
+    color: var(--clr-text);
+}
+
+a {
+    font-family: "robotoSlab-semibold";
+}
+
+h1 {
+    font-family: "roboto-bold";
+}
+
+h2 {
+    font-family: "roboto-bold";
+    background-color: var(--clr-red);
+}
+
+h3 {
+    font-family: "maitree-extralight";
+}
+
+h4, h5 {
+    font-family: "maitree-extralight";
+}
+
+.language {
+    font-family: "robotoSlab-light";
+}
+
+input {
+    font-family: "maitree-extralight";
+}
+
+.clrBlue {
+    color: var(--clr-blue);
+}
+

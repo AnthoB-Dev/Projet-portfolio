@@ -1,0 +1,606 @@
+// =========================================================================
+// =============================  GLOBAL  ==================================
+// =========================================================================
+
+.sectionTitle {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 7px 9px rgb(0 0 0 / 50%);
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    margin-bottom: 4rem;
+}
+
+h2 {
+    border-top: solid 1px var(--clr-gold);
+    border-bottom: solid 1px var(--clr-gold);
+    margin: 2rem 0;
+}
+
+
+// =========================================================================
+// ==========================  Section HOOK  ===============================
+// =========================================================================
+
+#hooked {
+    min-height: 100vh;
+    background-color: var(--clr-background);
+    margin-bottom: 2rem;
+
+    & .hook {
+        gap: 2rem;
+        width: 100%;
+        
+        &__top {
+            padding: 1rem .3rem;
+            background-color: var(--clr-topBackground);
+            width: 65%;
+            border: solid 1px var(--clr-gold);
+            border-left: none;
+        }
+
+        &__logo {
+            position: relative;
+            width: fit-content;
+            margin: 0 auto;
+            
+            & img {
+                width: 100%;
+            }
+        }
+
+        &__bot {
+            padding: .6rem .3rem;
+            background-color: var(--clr-topBackground);
+            align-self: flex-end;
+            width: 65%;
+            text-align: center;
+            border: solid 1px var(--clr-gold);
+            border-right: none;
+        }
+    }
+}
+
+// =========================================================================
+// =======================  Section QUI SUIS-JE  ===========================
+// =========================================================================
+
+#mySelf {
+    margin-bottom: 7rem;
+    
+    & .myName {
+        width: 100%;
+        text-align: center;
+        background-color: var(--clr-red);
+        margin-bottom: 1rem;
+        padding: .5rem 0;
+    }
+}
+
+.presentation {
+
+    & .toto {
+        padding: 0.5rem 1rem;
+        margin: 1rem;
+        background-color: var(--clr-background);
+        border-radius: 3px;
+        box-shadow: var(--boxshadow);
+    }
+
+    &__image {
+        width: 100%;
+
+        & img {
+            height: 100%;
+            border-radius: 3px;
+        }
+    }
+
+    &__text {
+        text-align: justify;
+    }
+}
+
+
+// =========================================================================
+// =======================  Section COMPETENCES  ===========================
+// =========================================================================
+
+.skillsContainer {
+    gap: 4rem;
+    width: 100%;
+}
+
+#mySkills {
+    width: 100%;
+    margin-bottom: 7rem;
+}
+
+.skills {
+    position: relative;
+    width: 100%;
+    z-index: 3;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--clr-topBackground);
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        height: 100%;
+        z-index: 1;
+        border: solid 1px var(--clr-gold50);
+        box-shadow: var(--boxshadow);
+    }
+    
+    .bckgrnd {
+        position: absolute;
+        background-color: var(--clr-topBackground);
+    }
+    
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .8rem;
+        width: 100%;
+        background-color: var(--clr-red);
+        padding: .6rem 0;
+        z-index: 2;
+        border: solid 1px var(--clr-gold);
+        border-left: none;
+        border-right: none;
+
+        & h3 {
+            align-self: flex-start;
+        }
+        
+        &__balise {
+            display: flex;
+            height: .9em;
+        }
+    }
+    
+    &__content {
+        background-color: var(--clr-background);
+        border: solid 1px var(--clr-blue);
+        width: 90%;
+        margin: .5rem 0;
+        padding: 1rem 0;
+        z-index: 2;
+        
+        .multipleContent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        &__logo {
+            width: 90px;
+            height: 90px;
+            background-color: var(--clr-text);
+
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+
+            & .language {
+                color: var(--clr-topBackground);
+            }
+
+            &:nth-child(2) {
+                background-color: blue;
+            }
+        }
+    }
+}
+
+
+// =========================================================================
+// =========================  Section PROJETS  =============================
+// =========================================================================
+
+#myProjects {
+    margin-bottom: 7rem;
+} 
+
+.projectsCards {
+    gap: 1rem;
+}
+
+.card {
+    border: solid 3px var(--clr-red);
+    margin: 0 1rem;
+    border-radius: 3px;
+    background: var(--clr-background);
+    box-shadow: var(--boxshadow);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    &__img {
+        border: solid 2px var(--clr-text);
+        border-left: none;
+        border-right: none;        
+        margin: 1rem 0;
+        box-shadow: var(--boxshadowY);
+    }
+
+    &__content {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-200%);
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        backdrop-filter: blur(5px);
+
+        &__title {
+            padding: 0.5rem;
+            width: 100%;
+        }
+    
+        &__descr {
+            padding: 0.5rem;
+            text-align: justify;
+        }
+    }
+}
+
+.cutoff-text {
+    --max-lines : 5;
+    
+    width: 100%;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+}
+
+@keyframes projectsDescrOutInFromBottom {
+    from {
+        transform: translateY(200%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.projectDescrOpen {
+    animation: projectsDescrOutInFromBottom .3s forwards;
+}
+
+@keyframes projectsDescrInOutToTop {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-200%);
+    }
+}
+
+.projectDescrClose {
+    animation: projectsDescrInOutToTop .3s;
+}
+
+
+// =========================================================================
+// =========================  Section CONTACT  =============================
+// =========================================================================
+
+#myContact {
+    margin-bottom: 3rem;
+
+    & h3 {
+        padding: 1rem;
+        width: 100%;
+        background-color: var(--clr-red);
+    }
+}
+
+.form {
+    padding: 1rem;
+    gap: 1rem;
+    
+    &__content {
+        width: 100%;
+        padding: .5rem;
+        background-color: var(--clr-background);
+        border: solid 1px var(--clr-gold50);
+        
+        &__title {
+            display: block;
+            padding: .3rem 0;
+        }
+        
+        &__input {
+            background-color: var(--clr-background);
+            border: solid 1px var(--clr-gold50);
+            width: 100%;
+
+            &:active{
+                border: blue;
+            }
+        }
+
+    }
+
+    &__button {
+        border: solid 1px var(--clr-gold50);
+        border-radius: 10px;
+        padding: .3em 1em;
+        background-color: var(--clr-red);
+        color: var(--clr-text);
+        box-shadow: var(--boxshadow);
+        cursor: pointer;
+    }
+}
+
+// =========================================================================
+// ==========================  MEDIA QUERIES  ==============================
+// =========================================================================
+
+
+// ------------------------------------------
+// -----------------  500px  ----------------
+// ------------------------------------------
+
+@media screen and (min-width: 500px) {
+
+    /////////////////////////////
+    ///  Section Qui suis-je  ///
+    /////////////////////////////
+
+    .presentation {
+        &__image {
+            width: 100%;
+            padding: 0 1rem 1rem 0;
+            width: 50%;
+            float: left;
+        }
+    }
+}
+
+
+// ------------------------------------------
+// -----------------  950px  ----------------
+// ------------------------------------------
+
+@media screen and (min-width: 950px) {
+
+    /////////////////////////////
+    ///  Section Qui suis-je  ///
+    /////////////////////////////
+     
+    #mySelf .myName {
+        width: 50%;
+        align-self: flex-start;
+    }
+
+    .presentation {
+        width: fit-content;
+        
+        & .toto {
+            display: flex;
+            align-self: flex-start;
+        }
+
+        &__image {
+            width: 325px;
+            padding: 0 1rem 0 0;
+            float: none;
+            align-self: center;
+        }
+
+        &__text {
+            width: 500px;
+        }
+    }
+
+    ////////////////
+    ///  FOOTER  ///
+    ////////////////
+    
+    #containerFooter img {
+        height: 300px;
+        width: 50%;
+    }
+}
+
+
+// ------------------------------------------
+// -----------------  1024px  ---------------
+// ------------------------------------------
+
+
+@media screen and (min-width: 1024px) {
+    main {
+        width: calc(100% - 150px);
+        margin-left: 150px;
+    }
+
+    .container {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+    }
+
+    .sectionTitle {
+        width: 96%;
+        margin-left: auto;
+        border-left: solid 1px var(--clr-gold);
+    }
+    
+    
+    ////////////////
+    ///  NAVBAR  ///
+    ////////////////
+    
+    .navbar {
+        width: 150px !important;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0 0 0 !important;
+        box-shadow: 0 1px 5px 3px rgb(0 0 0 / 50%), inset 0 0 0 0 rgb(0 0 0 / 50%) !important;
+
+        &__burger {
+            display: none !important;
+        }
+
+        &__links {
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            backdrop-filter: none !important;
+            background-color: var(--clr-background) !important;
+        }
+
+        &__logo {
+            width: 150px !important;
+            height: 90px !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            margin-top: 70px;
+            border-left: none !important;
+            border-right: none !important;
+
+            &:hover {
+                rotate: 0 !important;
+            }
+        }
+    }
+
+    .hidden {
+        display: block !important;
+    }
+
+
+    /////////////////////////////
+    ///  Section Qui suis-je  ///
+    /////////////////////////////
+    
+    .presentation {
+        width: auto;
+
+        &__text {
+            width: fit-content;
+        }
+
+        &__image img {
+            object-fit: cover;
+        }
+    }
+
+
+    /////////////////////////////
+    ///  Section Compétences  ///
+    /////////////////////////////
+    
+    .skillsContainer{
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+    }
+
+    .skills {
+        width: 47%;
+
+        &:nth-child(odd) .skills__title {
+            border-right: solid 1px var(--clr-gold);
+        }
+        &:nth-child(even) .skills__title {
+            border-left: solid 1px var(--clr-gold);
+        }
+
+        &__content{
+            gap: 6px;
+            background-color: var(--clr-topBackground);
+            border: none;
+            
+            &__logo  {
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;      
+                box-shadow: 0px 1px 2px 2px var(--clr-blue);
+
+                & img {
+                    width: 95%;
+                    height: 95%;
+                }
+            }
+        }
+    }
+
+
+    /////////////////////////
+    ///  Section Projets  ///
+    /////////////////////////
+    
+    .projectsCards {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+    }
+
+
+    /////////////////////////
+    ///  Section Contact  ///
+    /////////////////////////
+    
+    #myContact {
+    
+        & h3 {
+            width: 50%;
+            margin-bottom: 2rem;
+            border: solid 1px var(--clr-gold);
+            border-left: none;
+        }
+    }
+
+    .form {
+        width: 50%;
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        justify-content: space-between !important;
+        position: relative;
+
+        &__content {
+            width: 48%;
+
+            &:nth-child(3) {
+                width: 100%;
+            }
+            &:nth-child(4) {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__button {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+    }
+
+    
+    ////////////////
+    ///  FOOTER  ///
+    ////////////////
+    
+    footer {
+        width: calc(100% - 150px);
+        margin-left: 150px;
+    }
+}
